@@ -34,8 +34,22 @@ button {
   margin: 0 12px;
 }
 
-.full {
+.left {
+  top: 29%;
+  position: absolute;
+  width: 50%;
+  left: 1%;
+}
+
+.right {
+  position: absolute;
+  height: 70%;
+  width: 40%;
+  right: 7%;
+  top: 29%;
+}
+
+.group-box {
+  max-width: 100%;
   margin: 10px;
-  width: 50vw;
-  height: 50vh;
 }

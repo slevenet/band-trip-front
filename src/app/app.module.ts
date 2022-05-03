@@ -13,10 +13,14 @@ import {MatInputModule} from "@angular/material/input";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatRadioModule} from "@angular/material/radio";
 import {MatSelectModule} from "@angular/material/select";
+import { MapComponent } from './map/map.component';
+import { CreationComponent } from './event-trip/creation/creation.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MapComponent,
+    CreationComponent
   ],
   imports: [
     BrowserModule,
