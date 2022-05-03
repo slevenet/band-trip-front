@@ -30,7 +30,7 @@ function displayRoute(origin: string, destination: string, directionsService: go
 export class MapComponent implements OnInit {
   @Input() markers: Marker[] = [];
   @Input() groups: Event[] = []
-  @Output() clickEvent : EventEmitter<MouseEvent> = new EventEmitter();
+  @Output() clickEvent : EventEmitter<any> = new EventEmitter();
   zoom: number = 8;
   // initial center position for the map
   lat: number = 51.673858;

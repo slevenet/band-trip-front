@@ -1,0 +1,67 @@
+<div>
+  <div class="left">
+    <mat-card>
+      <mat-card-content>
+        <form class="example-form">
+          <mat-form-field class="event-name">
+            <mat-label>Event Name</mat-label>
+            <input [(ngModel)]="event.name" matInput name="name" placeholder="Ex. Pizza" value="Sushi">
+          </mat-form-field>
+<!--          <mat-form-field appearance="fill" class="event-date-range">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+              <input formControlName="start" matStartDate placeholder="Start date">
+              <input formControlName="end" matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+
+&lt;!&ndash;            <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+            <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>&ndash;&gt;
+          </mat-form-field>-->
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Event description</mat-label>
+            <textarea [(ngModel)]="event.description" matInput name="description"
+                      placeholder="Ex. It makes me feel..."></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Event location</mat-label>
+            <textarea [(ngModel)]="event.location.formattedAddress" matInput
+                      name="formattedAdres"
+                      placeholder="{{event.location.formattedAddress || 'test'}}"></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="small-right-field">
+            <mat-label>Longitude</mat-label>
+            <input [(ngModel)]="event.location.lng" matInput name="lng" placeholder="Longitude" value="Longitude">
+          </mat-form-field>
+
+          <mat-form-field class="small-left-field">
+            <mat-label>Latitude</mat-label>
+            <input [(ngModel)]="event.location.lat" matInput name="lat" placeholder="Latitude" value="Latitude">
+          </mat-form-field>
+
+          <mat-form-field class="small-right-field">
+            <mat-label>Минимум участников</mat-label>
+            <input [(ngModel)]="event.minParticipants" matInput name="minParticipants" placeholder="1"
+                   value="minParticipants">
+          </mat-form-field>
+
+          <mat-form-field class="small-left-field">
+            <mat-label>Максимум участников</mat-label>
+            <input [(ngModel)]="event.maxParticipants" matInput name="maxParticipants" placeholder="37"
+                   value="maxParticipants">
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button (click)="createEvent()" mat-raised-button>Ну что, народ, погнали нахуй ?</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div class="right">
+    <app-map (clickEvent)="onAClicked($event)" [markers]="markers"></app-map>
+  </div>
+</div>

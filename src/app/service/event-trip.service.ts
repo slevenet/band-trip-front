@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {EventTrip} from "../model/Event";
 
 @Injectable({
   providedIn: 'root'
@@ -14,15 +15,15 @@ export class EventTripService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getAllGroup(): Observable<Event[]> {
-    return this.httpClient.get<Event[]>(this.userUrl);
+  getAllGroup(): Observable<EventTrip[]> {
+    return this.httpClient.get<EventTrip[]>(this.userUrl);
   }
 
-  getEventById(id: number): Observable<Event> {
-    return this.httpClient.get<Event>(this.userUrl + '/' + id)
+  getEventById(id: number): Observable<EventTrip> {
+    return this.httpClient.get<EventTrip>(this.userUrl + '/' + id)
   }
 
-  createEvent(event: Event): Observable<Event> {
+  createEvent(event: EventTrip): Observable<Event> {
     return this.httpClient.post<Event>(this.userUrl, event);
   }
 }

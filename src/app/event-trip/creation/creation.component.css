@@ -1,0 +1,60 @@
+.group-box {
+  max-width: 90%;
+  margin: 10px;
+}
+
+.left {
+  padding-top: 1%;
+  position: absolute;
+  width: 51%;
+  left: 5%;
+}
+
+.right {
+  position: absolute;
+  height: 70%;
+  width: 40%;
+  right: 3%;
+  padding-top: 1%;
+}
+
+
+
+
+* {
+  font-family: Lato;
+}
+
+.example-form {
+  padding-left: 5%;
+  padding-top: 5%;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.small-right-field {
+  width: 45%;
+  padding-right: 21px;
+}
+
+.small-left-field {
+  width: 45%;
+  padding-left: 21px;
+}
+
+.event-name {
+  width: 50%;
+  padding-right: 15px;
+}
+
+.event-date-range {
+  width: 40%;
+  padding-left: 15px;
+}
+
+
