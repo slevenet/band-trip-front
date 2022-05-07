@@ -1,5 +1,5 @@
-import {EventLocation} from "./EventLocation";
 import {Participant} from "./Participant";
+import {MapPoint} from "./MapPoint";
 
 export interface EventTrip {
   id: string
@@ -12,6 +12,6 @@ export interface EventTrip {
   maxParticipants: number
   minParticipants: number
   participants: Participant[]
-  location: EventLocation
+  routes: MapPoint[]
 
 }

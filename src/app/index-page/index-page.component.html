@@ -1,0 +1,36 @@
+<div>
+  <mat-card>
+    <!--    <button mat-raised-button>Простой поиск</button>
+        <button mat-raised-button color="primary">Сложнее поиск</button>
+        <button mat-raised-button color="accent">Еще какой-то поиск</button>-->
+    <div class="example-container">
+      <form>
+        <mat-checkbox>Hide required marker</mat-checkbox>
+        <div>
+          <label>Float label: </label>
+          <mat-radio-group>
+            <mat-radio-button value="auto">Auto</mat-radio-button>
+            <mat-radio-button value="always">Always</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Both a label and a placeholder</mat-label>
+          <input matInput placeholder="Simple placeholder">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-select required>
+            <mat-option>-- None --</mat-option>
+            <mat-option value="option">Option</mat-option>
+          </mat-select>
+          <mat-label>
+            <mat-icon>favorite</mat-icon>
+            <b> Selector</b> <i> label</i></mat-label>
+        </mat-form-field>
+        <button mat-raised-button>Простой поиск</button>
+      </form>
+    </div>
+  </mat-card>
+</div>
+<app-event-list></app-event-list>

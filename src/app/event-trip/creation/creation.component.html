@@ -27,12 +27,23 @@
           </mat-form-field>
 
           <mat-form-field class="example-full-width">
-            <mat-label>Event location</mat-label>
-            <textarea [(ngModel)]="event.location.formattedAddress" matInput
-                      name="formattedAdres"
-                      placeholder="{{event.location.formattedAddress || 'test'}}"></textarea>
+            <mat-label>Начало маршрута</mat-label>
+            <textarea [(ngModel)]="routes[0]"
+              matInput
+                      id="start-route"
+                      name="formattedAddress"
+                      placeholder="test"></textarea>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Конец маршрута</mat-label>
+            <textarea [(ngModel)]="routes[routes.length - 1]"
+              matInput
+                      id="end-route"
+                      name="endRoute"
+                      placeholder="test"></textarea>
           </mat-form-field>
 
+<!--
           <mat-form-field class="small-right-field">
             <mat-label>Longitude</mat-label>
             <input [(ngModel)]="event.location.lng" matInput name="lng" placeholder="Longitude" value="Longitude">
@@ -41,7 +52,7 @@
           <mat-form-field class="small-left-field">
             <mat-label>Latitude</mat-label>
             <input [(ngModel)]="event.location.lat" matInput name="lat" placeholder="Latitude" value="Latitude">
-          </mat-form-field>
+          </mat-form-field>-->
 
           <mat-form-field class="small-right-field">
             <mat-label>Минимум участников</mat-label>
@@ -62,6 +73,6 @@
     </mat-card>
   </div>
   <div class="right">
-    <app-map (clickEvent)="onAClicked($event)" [markers]="markers"></app-map>
+    <app-map (pointsEvent)="test2($event)" [markers]="markers"></app-map>
   </div>
 </div>

@@ -16,17 +16,26 @@ import {MatSelectModule} from "@angular/material/select";
 import {MapComponent} from './map/map.component';
 import {CreationComponent} from './event-trip/creation/creation.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
-import {FormsModule} from "@angular/forms";
+import {FormBuilder, FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {AppRoutingModule} from "./app-routing.module";
+import {HttpClientModule} from "@angular/common/http";
+import { IndexPageComponent } from './index-page/index-page.component';
+import { EventListComponent } from './event-trip/event-list/event-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    CreationComponent
+    CreationComponent,
+    IndexPageComponent,
+    EventListComponent
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,

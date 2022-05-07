@@ -11,7 +11,7 @@ export class EventTripService {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
 
-  private userUrl = 'http://localhost:8081/events';
+  private userUrl = 'http://localhost:8080/api/trips/events';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -23,7 +23,11 @@ export class EventTripService {
     return this.httpClient.get<EventTrip>(this.userUrl + '/' + id)
   }
 
-  createEvent(event: EventTrip): Observable<Event> {
-    return this.httpClient.post<Event>(this.userUrl, event);
+  createEvent(event: EventTrip): Observable<EventTrip> {
+    return this.httpClient.post<EventTrip>(this.userUrl, event);
+  }
+
+  getAllEvents(): Observable<EventTrip[]> {
+    return this.httpClient.get<EventTrip[]>(this.userUrl);
   }
 }
